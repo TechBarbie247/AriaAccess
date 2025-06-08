@@ -1,0 +1,128 @@
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff9f5;
+  margin: 0;
+  padding: 0;
+  color: #5b3a29;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4c2c2;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #5b3a29;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
+}
+
+nav a:hover,
+nav a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+header {
+  background: linear-gradient(to right, #e7acb6, #e7c895);
+  text-align: center;
+  padding: 2rem;
+  color: #5b3a29;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+main {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.post-form {
+  background: #ccb597;
+  padding: 1rem;
+  border: 2px solid #f4c2c2;
+  border-radius: 8px;
+}
+
+textarea,
+select {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  border: 1px solid #f4c2c2;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #fff9f5;
+}
+
+button {
+  margin-top: 1rem;
+  background-color: #ffb6c1;
+  color: #5b3a29;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  background-color: #eec3d7;
+  outline: none;
+}
+
+.blog-section {
+  margin-bottom: 3rem;
+}
+
+.blog-section h2 {
+  border-bottom: 2px solid #f4c2c2;
+  padding-bottom: 0.5rem;
+}
+
+.blog-section .posts {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.post {
+  background: #fcdad5; 
+  padding: 1rem;
+  border-left: 5px solid #daa520;
+  border-radius: 5px;
+}
+
+:focus {
+  outline: 3px solid #daa520;
+  outline-offset: 2px;
+}
+
+@media (min-width: 600px) {
+  .blog-section .posts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .blog-section .posts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spilling Tea</title>
+    <link rel="stylesheet" href="ari.css" />
+</head>
+
+<body>
+
+    <nav role="navigation">
+        <a href="#thoughts">Thoughts</a>
+        <a href="#stories">Stories</a>
+        <a href="#notes">Notes</a>
+    </nav>
+
+
+
+    <header role="banner">
+        <h1>🍵 Spilling Tea</h1>
+        <p>✨ Share anonymously ✨</p>
+    </header>
+
+
+    <main role="main">
+
+        <section class="post-form" role="form" aria-labelledby="postFormTitle">
+            <h2 id="postFormTitle">Submit a Post</h2>
+
+            <label for="postContent">Your Message (anonymous)</label>
+            <textarea id="postContent" rows="4" aria-describedby="postHelp"></textarea>
+            <p id="postHelp" class="visually-hidden">Type your post content here.</p>
+
+            <label for="sectionSelector">Choose a Section</label>
+            <select id="sectionSelector">
+                <option value="thoughts">Thoughts</option>
+                <option value="stories">Stories</option>
+                <option value="notes">Notes</option>
+            </select>
+
+            <button onclick="submitPost()" aria-label="Post your message anonymously">Post Anonymously</button>
+        </section>
+
+
+        <section id="thoughts" class="blog-section" aria-labelledby="thoughtsHeading">
+            <h2 id="thoughtsHeading">Thoughts</h2>
+
+            <div class="posts" role="list" aria-live="polite"></div>
+        </section>
+
+        <section id="stories" class="blog-section" aria-labelledby="storiesHeading">
+            <h2 id="storiesHeading" tabindex="0">Stories</h2>
+            <div class="posts" role="list" aria-live="polite"></div>
+        </section>
+
+        <section id="notes" class="blog-section" aria-labelledby="notesHeading">
+            <h2 id="notesHeading" tabindex="0">Notes</h2>
+            <div class="posts" role="list" aria-live="polite"></div>
+        </section>
+    </main>
+
+
+    <footer role="contentinfo">
+        <p>&copy; 2025 Spilling Tea</p>
+    </footer>
+
+    <script src="ar.js"></script>
+</body>
+
+</html>
